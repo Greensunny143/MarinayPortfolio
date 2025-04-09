@@ -4,142 +4,81 @@
     box-sizing: border-box;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.Pic {
-    margin-left: -40px;
-    font-size: 50px;
-    color: white;
-    border-radius: 100px;
-    width: 100px;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.Pic:hover {
-    margin-left: -40px;
-    font-size: 50px;
-    color: white;
-    border-radius: 100px;
-    width: 100px;
-    cursor: pointer;
-    border: solid white;
-}
-
-.backgroundDesign {
-    position: absolute;
-}
-
-.backgroundDesign .Angela {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -5;
-    overflow: hidden;
-    margin-top: -100px;
-    opacity: 75%;
-    margin-left: 2in;
-}
-
-.backgroundDesign .Aurora {
-    float: right;
-    width: 16in;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -4;
-    transform: rotateY(180deg);
-    overflow: hidden;
-    margin-left: -6.2in;
-    opacity: 75%;
-}
-
-
-.goBackBtn {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    transition: .5s;
-}
-
-.goBackBtn:hover {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-}
-
-.navigation a {
-    position: relative;
-    font-weight: 500;
-    margin-left: 40px;
-    font-size: 30px;
-    border-bottom: solid white;
-    color: white;
-    text-decoration: none;
-    transition: .5s;
-}
-
-.navigation a:hover {
-    position: relative;
-    font-weight: 500;
-    margin-left: 40px;
-    font-size: 30px;
-    border-bottom: solid white;
-    color: black;
-    text-decoration: none;
-    background-color: white;
-    border-radius: 10px;
-}
-
 body {
-    background-image: linear-gradient(to left, rgb(238, 79, 79), rgb(126, 116, 216));
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 200px ;
+header {
+    position: sticky;
+    top:0;
+    padding: 1rem;
+    border-bottom: solid white;
+    backdrop-filter: blur(10px);
+    background-color: rgba(235, 160, 235, .5); 
+    overflow: hidden;
+    z-index: 99;
 }
 
-.edrian {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.edrian img {
-    width: 400px;
-    height: 400px;
+header a img {
     border-radius: 100%;
-    margin: 10px;
+    width: 5rem;
+    height: auto;
 }
 
-.ytLink {
+/*Style content starts here*/
+
+.interface {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 10px;
+    margin-top:7vh;
+    flex-direction: column;
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.ytLink iframe {
-    margin: 10px;
+.container, .container2, .container3, .container4 {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    margin-top: 5vh;
+    border: solid white;
+    backdrop-filter: blur(10px);
+    background-color: rgba(235, 160, 235, .5);
+    text-align: center;
+    color:aliceblue;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem;
 }
 
+.img1, .img2 {
+    border-radius:100%;
+    width:30%;
+    height: 20rem;
+    padding: 1rem;
+}
 
+.img1 {
+    z-index:10;
+    transition: .3s ease-out;
+}
 
+.img1:hover {
+    opacity: 0;
+}
 
+.img2 {
+    z-index: -10;
+    margin-top: -20rem;
+}
+
+.pic1 {
+    width:30%;
+    height:15%;
+    border-radius: 50%;
+}
 
