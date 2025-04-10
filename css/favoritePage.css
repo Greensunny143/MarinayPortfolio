@@ -15,6 +15,7 @@ body {
 }
 
 header {
+    width: 100%;
     position: sticky;
     top:0;
     height: 120px;
@@ -106,4 +107,25 @@ header a img {
 
 .pic img:hover {
     padding: 1.5rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+}
+@media (max-width: 767px) {
+    .interface {
+        flex-direction:column;
+    }
+
+    .container {
+        width:80%;
+    }
+
+    .container2 {
+        width:80%;
+    }
+
+    .pic img {
+        width:100px;
+        height:130px;
+    }
 }

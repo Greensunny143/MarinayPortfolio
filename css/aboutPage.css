@@ -11,6 +11,7 @@ body {
 }
 
 header {
+    width: 100%;
     position: sticky;
     top: 0;
     padding: 1rem;
@@ -32,11 +33,12 @@ header a img {
 .interface {
     display: flex;
     justify-content: center;
-    margin-top:7vh;
+    margin-top: 7vh;
     flex-direction: column;
 }
 
-.container, .container2 {
+.container,
+.container2 {
     margin-top: 5vh;
     border: solid white;
     backdrop-filter: blur(10px);
@@ -68,31 +70,138 @@ header a img {
 .organization {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     color: white;
     border: solid white;
     padding: 2rem;
 }
 
-.pycc, .alpha, .images, .nstp {
-    display:flex;
+.pycc,
+.alpha,
+.images,
+.nstp {
+    display: flex;
     justify-content: center;
     flex-direction: row;
     width: 100%;
-    margin-left:auto;
-margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.pycc img, .alpha img, .images img, .nstp img {
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5rem;
+    margin-bottom: 5rem;
+}
+
+.title h3 {
+    border: solid;
+    background-color: rgba(128, 126, 126, 0.356);
+    width: 20%;
+}
+
+.pycc img,
+.alpha img,
+.images img,
+.nstp img {
     padding: 1rem;
-    width:22rem;
-    
+    width: 22rem;
+    transition: .5s;
 }
 
-@media (max-width: 900px) {
+.pycc img:hover,
+.alpha img:hover,
+.images img:hover,
+.nstp img:hover {
+    padding: 2rem;
+    width: 22rem;
+    opacity: 50%;
+    filter: blur(8px);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
     .container {
         width:80%;
     }
+
+    .pycc,
+    .alpha,
+    .images,
+    .nstp {
+        flex-direction: row;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title {
+        width: 88%;
+        font-size:1rem;
+    }
+
+    .pycc img,
+    .alpha img,
+    .images img,
+    .nstp img {
+        padding: 1rem;
+        width: 12rem;
+        transition: .5s;
+    }
+
+    .pycc img:hover,
+    .alpha img:hover,
+    .images img:hover,
+    .nstp img:hover {
+        padding: 2rem;
+        width: 12rem;
+
+    }
 }
 
+@media (max-width: 767px) {
+    .container {
+        width: 80%;
+    }
+
+    .pycc,
+    .alpha,
+    .images,
+    .nstp {
+        flex-direction: column;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pycc img,
+    .alpha img,
+    .images img,
+    .nstp img {
+        padding: 1rem;
+        width: 90%;
+        transition: .5s;
+    }
+
+    .pycc img:hover,
+    .alpha img:hover,
+    .images img:hover,
+    .nstp img:hover {
+        padding: 2rem;
+        width: 15rem;
+
+    }
+
+    .title {
+        opacity: 0;
+    }
+
+}
