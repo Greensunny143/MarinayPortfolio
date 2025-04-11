@@ -11,6 +11,8 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     position: sticky;
     top: 0;
@@ -26,6 +28,35 @@ header a img {
     border-radius: 100%;
     width: 5rem;
     height: auto;
+}
+
+nav  {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 4rem;
+    font-size:2rem;
+    padding:1rem;
+    padding-bottom:0;
+    padding-top:0;
+    color: white;
+    border-bottom: solid white;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    transition: .5s;
+}
+
+nav a:hover {
+    background: white;
+    color: black;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
 }
 
 .mainInterface {
@@ -47,6 +78,7 @@ header a img {
 i {
     color: rgb(255, 255, 255);
     font-size: 5rem;
+    user-select: none;
 }
 
 .buttons {
@@ -90,7 +122,25 @@ i {
 }
 
 @media (max-width: 767px) {
+    body {
+background-size: cover;
+    }
+    header a img {
+width:3rem;
+    }
+    nav a {
+        margin-left: 1rem;
+        font-size: 1rem;
+    }
+    .container {
+margin-top:5vh;
+    }
     .btn {
         width: 80%;
     }
+    .container h1,
+i {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+}
 }
